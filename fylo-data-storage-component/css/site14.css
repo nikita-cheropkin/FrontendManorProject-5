@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../Fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "RalewayBold";
+    src: url("../Fonts/Raleway-Bold.ttf");
+}
+
+:root {
+    --bg-color: #0c122c;
+    --card-color: #1e2c69;
+    --bg-icons: #0c122d;
+    --bg-progress: #151e49;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+picture {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+picture img {
+    width: 100%;
+}
+
+.main-frame {
+    color: white;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    align-items: end;
+    gap: 40px;
+}
+
+.first-block {
+    background-color: var(--card-color);
+    padding: 35px;
+    border-radius: 10px 100px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    width: 320px;
+}
+
+.flex-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-icons img {
+    background-color: var(--bg-icons);
+    padding: 10px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.second-block {
+    background-color: var(--card-color);
+    padding: 40px;
+    border-radius: 10px;
+    width: 600px;
+    position: relative;
+}
+
+.second-block > h1 {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.gb-text {
+    font-family: "RalewayBold";
+}
+
+
+.progress-container {
+    width: 100%;
+    padding: 5px;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: var(--bg-progress);
+    margin-top: 24px;
+}
+
+.progress-line {
+    width: 70%;
+    border-radius: 50px;
+    padding: 7px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress-sphere {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    right: 2px;
+    border-radius: 50%;
+}
+
+.descp {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.descp h1, h2 {
+    font-size: 14px;
+    font-family: "Raleway";
+}
+
+.message {
+    position: absolute;
+    top: -55px;
+    right: 40px;
+    background-color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-family: "RalewayBold";
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#count {
+    color: black;
+    display: flex;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+#gb-left {
+    color: grey;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.message::after {
+    content: "";
+    border: 20px solid transparent;
+    border-bottom-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    transform: rotate(270deg);
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main-frame {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .second-block {
+        width: 100%;
+    }
+
+    .message {
+        left: 60px;
+        bottom: -260px;
+        align-self: center;
+    }
+
+    .message::after {
+        display: none;
+    }
+
+    #count {
+        font-size: 2.4rem;
+    }
+
+    .descp {
+        margin-bottom: 28px;
+    }
+}

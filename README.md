@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/fylo-data-storage-component-oipVHDUsoS)
-- Live Site URL: [Add live site URL here](https://nikita-cheropkin.github.io/FrontendManorProject-5/fylo-data-storage-component/site14.html)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/fylo-data-storage-component-oipVHDUsoS)
+- Live Site URL: [Live Site](https://nikita-cheropkin.github.io/FrontendManorProject-5/fylo-data-storage-component/site14.html)
 
 ## My process
 
